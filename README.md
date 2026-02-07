@@ -1,113 +1,80 @@
-# CAR-MODEL-IN-ML
-A linear regression model to predict car prices.
-🚗 Car Price Prediction Using Machine Learning (Regression)
-📌 Project Overview
+# 🚗 Car Price Prediction Using Machine Learning (Regression)
 
-This project applies machine learning regression models to predict car prices in Million ₦ based on vehicle features.
-The goal is to build a beginner-friendly end-to-end pipeline including data cleaning, exploratory data analysis (EDA), feature engineering, model training, and evaluation.
+## 📌 Project Overview
+This project uses **machine learning regression models** to predict car prices in **Million ₦** based on vehicle characteristics.  
+It demonstrates a beginner-friendly end-to-end workflow including data cleaning, exploratory data analysis (EDA), feature engineering, model training, evaluation, and prediction.
 
-Because the target variable (Amount) is numeric, this is a regression problem, not classification.
+Since the target variable (**Amount**) is numeric, this is a **Regression Problem**.
 
-📊 Dataset Features
+---
 
-The dataset contains the following attributes:
+## 📊 Dataset Features
+The dataset contains the following variables:
 
-Location
+- **Location** – City where the car is listed
+- **Maker** – Car brand
+- **Year** – Manufacturing year
+- **Colour** – Vehicle colour
+- **Type** – Car condition/type
+- **Distance_Km** – Distance driven
+- **Amount (Million ₦)** – Target variable (car price)
 
-Maker (Brand)
+---
 
-Year
-
-Colour
-
-Type (Brand New / Used, etc.)
-
-Distance_Km
-
-Amount (Million ₦) — Target Variable
-
-⚙️ Project Workflow
-
+## ⚙️ Project Workflow
 The notebook follows these main steps:
 
-Import required libraries
+1. Import required libraries
+2. Load dataset from Google Drive
+3. Data Understanding (`info`, `describe`)
+4. Data Cleaning
+   - Remove irrelevant columns
+   - Remove duplicates
+   - Fix structural errors
+   - Handle missing values
+5. Exploratory Data Analysis (EDA)
+6. Feature Encoding (Label Encoding)
+7. Feature Scaling (StandardScaler)
+8. Train-Test Split
+9. Model Training
+10. Model Evaluation
+11. Price Prediction for a New Car
 
-Load dataset from Google Drive
+---
 
-Data understanding and inspection
+## 🤖 Machine Learning Models Used
+- Linear Regression
+- Decision Tree Regressor
+- Random Forest Regressor
+- Gradient Boosting Regressor
 
-Data cleaning
+📌 **Best Performing Model:** Gradient Boosting Regressor
 
-Remove irrelevant columns
+---
 
-Handle duplicates
+## 📈 Evaluation Metrics
+Models were evaluated using:
 
-Fix structural errors
+- MAE (Mean Absolute Error)
+- RMSE (Root Mean Squared Error)
+- R² Score
 
-Fill missing values
+---
 
-Exploratory Data Analysis (EDA)
+## 🛠️ Technologies & Libraries
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Google Colab
 
-Feature Encoding and Scaling
+---
 
-Train–Test Split
-
-Model Training:
-
-Linear Regression
-
-Decision Tree Regressor
-
-Random Forest Regressor
-
-Gradient Boosting Regressor
-
-Model Evaluation using:
-
-MAE
-
-RMSE
-
-R² Score
-
-Predicting price for a new car
-
-🤖 Models Used
-
-Linear Regression
-
-Decision Tree
-
-Random Forest
-
-Gradient Boosting
-
-Gradient Boosting achieved the best overall performance in this project.
-
-📈 Technologies & Libraries
-
-Python
-
-Pandas
-
-NumPy
-
-Matplotlib & Seaborn
-
-Scikit-learn
-
-Google Colab
-
-🎯 Project Goal
-
-To demonstrate how machine learning can be used to estimate vehicle prices based on real-world car attributes.
-
-▶️ How to Run
-
-Open the notebook in Google Colab
-
-Mount Google Drive
-
-Upload the dataset (Car.xlsx)
-
-Run all cells sequentially
+## ▶️ How to Run the Project
+1. Open the notebook in **Google Colab**
+2. Mount your Google Drive:
+   ```python
+   from google.colab import drive
+   drive.mount('/content/drive')
